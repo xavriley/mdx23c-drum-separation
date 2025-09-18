@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "mdx23c-drum-separation"
 version = "0.1.0"
 authors = [
-    {name = "MDX23C Drum Separation", email = ""},
+    {name = "Xavier Riley", email = "xavriley@hotmail.com"},
 ]
 description = "A pip installable package for drum separation using the MDX23C model"
 readme = "README.md"
