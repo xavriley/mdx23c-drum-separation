@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdx23c-drum-separation"
+version = "0.1.0"
+authors = [
+    {name = "MDX23C Drum Separation", email = ""},
+]
+description = "A pip installable package for drum separation using the MDX23C model"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research", 
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+keywords = ["audio", "music", "source-separation", "drums", "ai", "machine-learning"]
+dependencies = [
+    "torch>=2.0.1",
+    "numpy",
+    "soundfile", 
+    "numba",
+    "librosa>=0.10",
+    "tqdm",
+    "matplotlib",
+    "pyyaml",
+    "huggingface_hub",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/mdx23c-drum-separation"
+"Bug Reports" = "https://github.com/your-username/mdx23c-drum-separation/issues"
+Source = "https://github.com/your-username/mdx23c-drum-separation"
+
+[project.scripts]
+mdx23c-separate = "mdx23c.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mdx23c*"]
+exclude = ["tests*"]
+
+[tool.setuptools.package-data]
+mdx23c = ["*.yaml", "*.yml"]

@@ -1,0 +1,9 @@
+torch>=2.0.1
+numpy
+soundfile
+numba
+librosa>=0.10
+tqdm
+matplotlib
+pyyaml
+huggingface_hub
